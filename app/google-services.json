@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "23417832674",
+    "firebase_url": "https://projeto-integrador-cf5fc.firebaseio.com",
+    "project_id": "projeto-integrador-cf5fc",
+    "storage_bucket": "projeto-integrador-cf5fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23417832674:android:8990ef8a45633b15b48abb",
+        "android_client_info": {
+          "package_name": "com.example.daniel.informa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23417832674-b3komnbh3vfb19ru0a3bhvkcfj0panqo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.daniel.informa",
+            "certificate_hash": "3e4bae4050dcaf55bf7b55c6e8d15b6fd61e955b"
+          }
+        },
+        {
+          "client_id": "23417832674-4hvu5q8eeso83vcl583htpot6rl1oini.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCudq5EWE6jssQ_NITjm5HsfMVgO5uIDb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23417832674-4hvu5q8eeso83vcl583htpot6rl1oini.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
