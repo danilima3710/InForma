@@ -3,6 +3,9 @@ package com.example.daniel.informa;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.View;
@@ -17,12 +20,16 @@ public class cadastrarArtigo extends AppCompatActivity {
     ArrayList<artigo> arrayArtigos= new ArrayList<artigo>();
     artigo objetoArtigo = new artigo();
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_artigo);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +94,14 @@ public class cadastrarArtigo extends AppCompatActivity {
 
         arrayArtigos.add(objetoArtigo);
 
-        Toast toast = Toast.makeText(getApplicationContext(), Arrays.toString(arrayArtigos.toArray()),Toast.LENGTH_LONG);
+
+        myRef.child("Descricao").child("nome").setValue(objetoArtigo.descricao);
+        myRef.child("Titulo").child("nome").setValue(objetoArtigo.titulo);
+        myRef.child("Categoria").child("nome").setValue(objetoArtigo.categoria);
+        myRef.child("publico").child("nome").setValue(objetoArtigo.publico);
+        myRef.child("tipoArtigo").child("nome").setValue(objetoArtigo.tipoArtigo);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "Cadastrado Com Sucesso",Toast.LENGTH_LONG);
         toast.show();
     }
 }
